@@ -10,11 +10,11 @@ import { ConfigModule } from '@nestjs/config';
   imports: [
     ConfigModule.forRoot(),
     TypeOrmModule.forRoot({
-      type: 'postgres',
+      type: 'mysql',
       host: 'localhost',
-      port: 5433,
+      port: 3306,
       password: process.env.DB_PASSWORD,
-      username: 'postgres',
+      username: 'root',
       entities: [User],
       database: 'todo',
       synchronize: true,
