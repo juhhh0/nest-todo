@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Page D'inscription</h1>
-</body>
-</html>
+<%- include("../partials/header", {title: "Inscription"}) %>
+    <form action="" class="user-form">
+        <h2>Inscription</h2>
+        <%- include("../components/input", {type: "text", name: "username"}) %>
+        <%- include("../components/input", {type: "email", name: "email"}) %>
+        <%- include("../components/input", {type: "password", name: "password"}) %>
+        <button type="submit">s'inscrire</button>
+    </form>
+<%- include("../partials/footer") %>

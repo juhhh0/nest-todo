@@ -8,7 +8,6 @@ export class UserController {
     getSignup() {}
 
     @Get('login')
-    getLogin() {
-        return 'This is the login page';
-    }
+    @Render('user/login')
+    getLogin() {}
 }

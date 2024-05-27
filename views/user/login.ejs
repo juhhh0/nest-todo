@@ -1,0 +1,8 @@
+<%- include("../partials/header", {title: "Connexion"}) %>
+<form action="" class="user-form">
+        <h2>Connexion</h2>
+        <%- include("../components/input", {type: "email", name: "email"}) %>
+        <%- include("../components/input", {type: "password", name: "password"}) %>
+        <button type="submit">Connexion</button>
+    </form>
+<%- include("../partials/footer") %>

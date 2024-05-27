@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, li {
+    list-style: none;
+}
+
+body{
+    background-color: #333;
+    color: white;
+}
+
+nav{
+    display: flex;
+    background-color: #222;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.user-form{
+    border: #222822 solid 1px;
+    max-width: 740px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
