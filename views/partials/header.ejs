@@ -8,14 +8,17 @@
 </head>
 <body>
     <nav>
-        <h1>To Do ☑️ </h1>
+        <a href="/"><h1>To Do ☑️ </h1></a>
         <ul>
+            <% if(!locals.connected) { %>
             <li><a href="/user/signup">Inscription</a></li>
             <li><a href="/user/login">Connexion</a></li>
+            <% } else { %>
             <li>
                 <form action="/user/logout" method="post"">
                     <button type="submit">Déconnexion</button>
                 </form>
             </li>
+            <% } %>
         </ul>
     </nav>
