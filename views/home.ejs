@@ -2,6 +2,7 @@
 <h1>Home Page</h1>
 <% if(locals.connected) { %>
     <p>Welcome <%= locals.user.username %></p>
+    <%- include("./todo/addTodo") %>
 <% } else { %>
     <p>Welcome, please <a href="/user/login">login</a> or <a href="/user/signup">signup</a></p>
 <% } %>

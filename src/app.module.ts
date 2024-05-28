@@ -5,6 +5,8 @@ import { UserModule } from './user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './user/user.entity';
 import { ConfigModule } from '@nestjs/config';
+import { TodoModule } from './todo/todo.module';
+import { Todo } from './todo/todo.entity';
 
 @Module({
   imports: [
@@ -15,12 +17,13 @@ import { ConfigModule } from '@nestjs/config';
       port: 3306,
       password: process.env.DB_PASSWORD,
       username: 'root',
-      entities: [User],
+      entities: [User, Todo],
       database: 'todo',
       synchronize: true,
       logging: true,
     }),
     UserModule,
+    TodoModule,
   ],
   controllers: [AppController],
   providers: [AppService],
