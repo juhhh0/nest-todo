@@ -1,9 +1,11 @@
 <%- include("../partials/header", {title: "Inscription"}) %>
+<main>
     <form action="" method="post" class="user-form">
-        <h2>Inscription</h2>
-        <%- include("../components/input", {type: "text", name: "username"}) %>
-        <%- include("../components/input", {type: "email", name: "email"}) %>
-        <%- include("../components/input", {type: "password", name: "password"}) %>
-        <button type="submit">s'inscrire</button>
+        <h2>Create your account</h2>
+        <%- include("../components/input", {type: "text", name: "username", placeholder: "Username"}) %>
+        <%- include("../components/input", {type: "email", name: "email", placeholder: "Email"}) %>
+        <%- include("../components/input", {type: "password", name: "password", placeholder: "Password"}) %>
+        <%- include("../components/button", {type: "submit", label: "Sign up", color: "purple"}) %>
     </form>
+</main>
 <%- include("../partials/footer") %>

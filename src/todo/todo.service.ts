@@ -16,6 +16,17 @@ export class TodoService {
     const todo = this.todosRepository.create({ title });
     todo.user = user;
     await this.todosRepository.save(todo);
+  }
 
+  getUserTodos(user: User) {
+    return this.todosRepository.find({ where: { user } });
+  }
+
+  updateTodo(id: number, completed: boolean) {
+    return this.todosRepository.update(id, { completed });
+  }
+
+  deleteTodo(id: number) {
+    return this.todosRepository.delete(id);
   }
 }

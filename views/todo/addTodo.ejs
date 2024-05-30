@@ -1,5 +1,4 @@
-<form action="todo/add" method="post">
-    <h2>Add Todo list</h2>
-    <%- include("../components/input", {type: "text", name: "title"}) %>
-    <button type="submit">add Todo</button>
+<form class="todo-form" action="todo/add" method="post">
+    <%- include("../components/input", {type: "text", name: "title", placeholder: "What do you have to do ?"}) %>
+    <%- include("../components/button", {type: "submit", label: "add", color: "purple"}) %>
 </form>

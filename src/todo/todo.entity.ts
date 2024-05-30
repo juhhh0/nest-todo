@@ -15,6 +15,9 @@ export class Todo {
   @Column()
   readonly title: string;
 
+  @Column({default: false})
+  readonly completed: boolean;
+
   @CreateDateColumn()
   readonly createdAt: Date;
 

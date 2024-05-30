@@ -1,9 +1,24 @@
 <%- include("./partials/header", {title: "Home"}) %>
-<h1>Home Page</h1>
+<main>
+    
 <% if(locals.connected) { %>
-    <p>Welcome <%= locals.user.username %></p>
+    <h2>Hey <%= locals.user.username %> !</h2>
     <%- include("./todo/addTodo") %>
+    <% if(locals.todos) { %>
+        <section>
+            <h2>Tasks</h2>
+            <ul class="todos">
+                <% locals.todos.forEach(todo => { %>
+                    <%- include("./components/todo", {title: todo.title, checked: todo.completed, id: todo.id}) %>
+                <% }) %>
+            </ul>
+        </section>
+    <% } %>
 <% } else { %>
-    <p>Welcome, please <a href="/user/login">login</a> or <a href="/user/signup">signup</a></p>
+    <h2>Welcome</h2>
+    <p>This is a simple to do list project, build for learning purpose with Nest JS.</p>
+    <p>Please <a href="/user/login">login</a> or <a href="/user/signup">sign up</a> to access the app</p>
 <% } %>
+</main>
+
 <%- include("./partials/footer") %>

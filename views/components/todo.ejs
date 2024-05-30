@@ -1,0 +1,11 @@
+<li class="todo">
+    <span><%= title %></span>
+    <div>
+        <form action="/todo/complete/<%= id %>" method="post">
+            <input onChange="this.form.submit()" type="checkbox" name="checked" id="checked" <%= checked ? 'checked' : '' %> />
+        </form>
+        <form action="/todo/delete/<%= id %>" method="post">
+            <button type="submit"><img class="icon" src="/trash.svg" alt=""></button>
+        </form>
+    </div>
+</li>
